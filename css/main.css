@@ -7572,7 +7572,7 @@ a.credit {
 
 .cc-portfolio-image figure {
   width: 100%;
-  height: 300px; /* Fixed height for the card */
+  height: 400px; /* Fixed height for the card */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7584,7 +7584,7 @@ a.credit {
 .cc-portfolio-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+  object-fit: contain; /* Ensure the image covers the area while maintaining aspect ratio */
 }
 
 .cc-portfolio-image figcaption {
@@ -7728,3 +7728,17 @@ a.credit {
   margin-bottom: 10px;
 }
 
+@keyframes fadeLeft {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+  }
+
+  .fade-left {
+    animation: fadeLeft 1s forwards;
+  }
